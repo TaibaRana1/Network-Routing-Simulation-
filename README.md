@@ -1,26 +1,45 @@
-# Network-Routing-Simulation-
-This project simulates intelligent message routing across a network using Dijkstra’s algorithm. Each node maintains a dynamic routing table optimized for quick lookups, enabling efficient path selection for message delivery.
-ntelligent Network Routing Simulation Using Splay Trees and Dijkstra's Algorithm
-This project presents a simulation of intelligent message routing across a dynamic network topology. Developed as a Data Science term project at FAST-NU, Spring 2025, the system models a distributed network using a graph-based approach, where each node maintains a local routing table and message queue.
+Intelligent Network Routing Simulation (C++)
+This project is a C++ simulation of intelligent message routing across a dynamically defined network, . It demonstrates how advanced algorithms and data structures can be used to optimize communication in networked systems, mimicking real-world routing behaviors.
 
-The key objective was to explore efficient, adaptive routing techniques for minimizing latency and resource usage in real-world networking scenarios. To achieve this, the project integrates:
-Dijkstra's Algorithm for computing shortest paths between nodes
-Custom message-passing simulation, complete with a user-defined message generation, timestamping, and routing behavior
+*Overview:*
+The simulation models a network of nodes, each with its own routing table and ability to send and receive messages. To determine the most efficient communication paths, the project uses Dijkstra’s algorithm for shortest path calculations. 
+This combination of graph algorithms and adaptive data structures results in a system capable of smart, fast, and flexible routing decisions in response to simulated message traffic.
 
-*Key Features:*
-Graph Representation of Network: The network is represented as a weighted graph, with nodes and directed/undirected edges carrying weights that simulate latency or bandwidth cost.
-Dynamic Routing Tables: Each node maintains its own routing table, updated using Dijkstra’s algorithm when network conditions change or messages are received.
-Efficient Lookup with Splay Trees: To improve performance during frequent routing table updates and lookups, splay trees are used to ensure amortized logarithmic time complexity.
-Message Handling Simulation: The project processes a predefined set of messages that traverse the network. Each message is routed from source to destination via the shortest path determined by the current state of the network.
-Traceability & Logging: Each step of the message routing process is logged, offering detailed insights into routing decisions, path selections, and splay tree operations.
+*Key Features*
+Graph-Based Network Modeling
+The network is implemented as a weighted graph, where nodes represent routers and edges simulate communication channels with varying costs (such as latency or bandwidth).
 
-*Technologies Used:*
-Python for simulation logic and data structures
-NetworkX or custom graph logic (depending on implementation specifics)
-Matplotlib or console-based logs for tracing message flow
+*Dijkstra’s Algorithm for Shortest Path:*
+Efficient path computation between nodes is handled using Dijkstra’s algorithm, ensuring messages follow the least-cost route.
 
-*Learning Outcomes:*
-Understanding of how classical algorithms (like Dijkstra's) are applied in real-time systems
-Practical use of self-adjusting data structures (splay trees) in optimizing routing logic
-Enhanced debugging, logging, and testing skills for complex data pipelines
-Experience in simulating real-world network behaviors and interpreting routing dynamics
+*Splay Trees for Routing Table Optimization*
+Routing tables are implemented  to prioritize frequently accessed paths, improving lookup performance over time through self-adjustment.
+
+*Message Routing Simulation*
+Messages are generated with defined sources and destinations, passed through the network, and tracked for delivery time, hop count, and routing decisions.
+
+*Data Logging and Analysis*
+Each step of the routing process is logged to allow analysis of algorithm performance, tree adjustments, and overall message flow efficiency.
+
+*Technologies Used*
+Language: C++ 
+
+Data Structures: Graphs, Priority Queues
+
+Algorithms: Dijkstra’s Algorithm
+
+
+Learning Objectives:
+Applying theoretical graph algorithms in practical network simulations
+
+
+
+
+Potential Extensions:
+Implementing real-time network updates (dynamic topology)
+
+Adding congestion modeling or bandwidth constraints
+
+Introducing alternative routing algorithms (e.g., Bellman-Ford)
+
+Visualizing network behavior with a graphical interface
